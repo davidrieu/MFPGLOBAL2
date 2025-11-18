@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devis - Plugin WordPress Espace Client Mon Plant Fraise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            border-bottom: 4px solid #6B8E23;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #6B8E23;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .header-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        h2 {
+            color: #6B8E23;
+            font-size: 22px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        h3 {
+            color: #4a6b1a;
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        h4 {
+            color: #333;
+            font-size: 16px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #6B8E23;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .time-box {
+            background: #f0f7e0;
+            border-left: 4px solid #6B8E23;
+            padding: 12px 15px;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+
+        .cost-summary {
+            background: #6B8E23;
+            color: white;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .cost-summary strong {
+            font-size: 16px;
+        }
+
+        .highlight-box {
+            background: #fff8dc;
+            border: 2px solid #f0ad4e;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .success-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        .signature-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #ddd;
+        }
+
+        .signature-block {
+            width: 45%;
+        }
+
+        .signature-line {
+            border-bottom: 1px solid #333;
+            margin-top: 60px;
+            padding-top: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #6B8E23;
+            color: #666;
+            font-size: 12px;
+            font-style: italic;
+        }
+
+        .page-break {
+            page-break-after: always;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+
+        .deliverable-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .deliverable-list li::before {
+            content: "✅ ";
+            margin-right: 8px;
+        }
+
+        strong {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Devis - Plugin WordPress sur mesure "Espace Client Mon Plant Fraise"</h1>
+            <div class="header-info">
+                <div><strong>Date :</strong> 18 novembre 2025</div>
+                <div><strong>Projet :</strong> Développement plugin WordPress personnalisé</div>
+                <div><strong>Client :</strong> MPF Group</div>
+                <div><strong>Validité :</strong> 30 jours</div>
+            </div>
+        </div>
+
+        <h2>1. CONTEXTE DU PROJET</h2>
+        <p>Développement d'un plugin WordPress sur mesure reproduisant toutes les fonctionnalités de l'espace client actuel de Mon Plant Fraise, une plateforme de financement participatif agricole pour le parrainage de plants de fraisiers.</p>
+        <p>Le plugin permettra aux utilisateurs de gérer leurs investissements, suivre leurs rendements, parrainer d'autres membres, et commander des produits, le tout dans un environnement WordPress sécurisé et moderne.</p>
+
+        <h2>2. PÉRIMÈTRE FONCTIONNEL</h2>
+
+        <h3>2.1 Authentification et Gestion de Compte</h3>
+
+        <h4>Inscription des Membres</h4>
+        <ul>
+            <li>Formulaire d'inscription personnalisé avec validation avancée</li>
+            <li>Validation par email (double opt-in)</li>
+            <li>Génération automatique du code parrain unique</li>
+            <li>Intégration du système de parrainage (saisie du code parrain lors de l'inscription)</li>
+            <li>Création automatique du profil investisseur</li>
+            <li>Conformité RGPD (consentement, politique de confidentialité)</li>
+        </ul>
+        <div class="time-box">Temps de développement : 2 jours</div>
+
+        <h4>Connexion et Sécurité</h4>
+        <ul>
+            <li>Page de connexion personnalisée avec design sur mesure</li>
+            <li>Système de récupération de mot de passe par email</li>
+            <li>Limitation des tentatives de connexion (protection brute force)</li>
+            <li>Session sécurisée avec tokens</li>
+            <li>Déconnexion automatique après inactivité</li>
+            <li>Conformité aux standards de sécurité WordPress</li>
+        </ul>
+        <div class="time-box">Temps de développement : 1,5 jour</div>
+
+        <h3>2.2 Dashboard Investisseur</h3>
+
+        <h4>Vue d'ensemble</h4>
+        <ul>
+            <li>Tableau de bord personnalisé affichant :
+                <ul>
+                    <li>Nombre total de plants parrainés</li>
+                    <li>Montant total investi</li>
+                    <li>Rendement estimé</li>
+                    <li>Statut des contrats</li>
+                    <li>Prochaines récoltes</li>
+                </ul>
+            </li>
+            <li>Graphiques de performance (évolution des investissements)</li>
+            <li>Notifications et alertes importantes</li>
+            <li>Accès rapide aux fonctionnalités principales</li>
+        </ul>
+        <div class="time-box">Temps de développement : 3 jours</div>
+
+        <h4>Gestion du Portefeuille</h4>
+        <ul>
+            <li>Liste détaillée des plants parrainés avec :
+                <ul>
+                    <li>Date d'investissement</li>
+                    <li>Numéro de contrat</li>
+                    <li>Montant investi</li>
+                    <li>Durée du contrat</li>
+                    <li>Rendement prévisionnel</li>
+                    <li>Statut (actif, en attente, terminé)</li>
+                </ul>
+            </li>
+            <li>Filtres et recherche avancée</li>
+            <li>Export des données (PDF, Excel)</li>
+            <li>Historique complet des transactions</li>
+        </ul>
+        <div class="time-box">Temps de développement : 2,5 jours</div>
+
+        <h3>2.3 Système de Parrainage</h3>
+
+        <h4>Espace Apporteur d'Affaires</h4>
+        <ul>
+            <li>Dashboard dédié aux apporteurs montrant :
+                <ul>
+                    <li>Code parrain personnel</li>
+                    <li>Nombre de filleuls</li>
+                    <li>Commissions générées</li>
+                    <li>Statut des paiements de commissions</li>
+                </ul>
+            </li>
+            <li>Lien de parrainage personnalisé</li>
+            <li>Statistiques de performance (taux de conversion)</li>
+            <li>Outils de partage sur réseaux sociaux</li>
+            <li>Historique des parrainages et commissions</li>
+        </ul>
+        <div class="time-box">Temps de développement : 3 jours</div>
+
+        <h4>Système de Commissions</h4>
+        <ul>
+            <li>Calcul automatique des commissions selon grille définie</li>
+            <li>Tableau récapitulatif des commissions par période</li>
+            <li>Système de paiement des commissions</li>
+            <li>Génération de documents fiscaux</li>
+            <li>Notifications de nouvelles commissions</li>
+        </ul>
+        <div class="time-box">Temps de développement : 2 jours</div>
+
+        <h3>2.4 Gestion des Documents</h3>
+
+        <h4>Mes Documents</h4>
+        <ul>
+            <li>Bibliothèque de documents personnalisée :
+                <ul>
+                    <li>Contrats de parrainage signés</li>
+                    <li>Factures d'investissement</li>
+                    <li>Documents fiscaux</li>
+                    <li>Bulletins de récolte</li>
+                    <li>Attestations diverses</li>
+                </ul>
+            </li>
+            <li>Téléchargement sécurisé des documents (PDF)</li>
+            <li>Organisation par catégorie et date</li>
+            <li>Recherche et filtrage</li>
+            <li>Archivage automatique</li>
+        </ul>
+        <div class="time-box">Temps de développement : 2 jours</div>
+
+        <h4>Signature Électronique de Contrats</h4>
+        <ul>
+            <li>Interface de signature électronique intégrée</li>
+            <li>Visualisation du contrat avant signature</li>
+            <li>Signature par clic avec horodatage</li>
+            <li>Génération automatique du PDF signé</li>
+            <li>Envoi par email du contrat signé</li>
+            <li>Conformité légale (eIDAS, signature simple)</li>
+            <li>Historique des signatures</li>
+        </ul>
+        <div class="time-box">Temps de développement : 3 jours</div>
+
+        <h3>2.5 Suivi des Récoltes</h3>
+
+        <h4>Mes Récoltes</h4>
+        <ul>
+            <li>Tableau de bord des récoltes avec :
+                <ul>
+                    <li>Rendement par période</li>
+                    <li>Quantité de fraises produites par mes plants</li>
+                    <li>Valorisation financière</li>
+                    <li>Prochaines distributions prévues</li>
+                </ul>
+            </li>
+            <li>Historique des récoltes passées</li>
+            <li>Calcul du retour sur investissement (ROI)</li>
+            <li>Graphiques d'évolution</li>
+            <li>Export des données</li>
+        </ul>
+        <div class="time-box">Temps de développement : 2,5 jours</div>
+
+        <h3>2.6 Commande de Produits</h3>
+
+        <h4>Boutique Intégrée</h4>
+        <ul>
+            <li>Catalogue de produits (fraises fraîches, confitures, sirops)</li>
+            <li>Système de panier d'achat</li>
+            <li>Gestion des quantités et stocks</li>
+            <li>Prix préférentiels pour les investisseurs</li>
+            <li>Système de codes promotionnels</li>
+            <li>Calcul automatique des frais de livraison</li>
+        </ul>
+        <div class="time-box">Temps de développement : 3 jours</div>
+
+        <h4>Processus de Paiement</h4>
+        <ul>
+            <li>Intégration Stripe sécurisée :
+                <ul>
+                    <li>Paiement par carte bancaire</li>
+                    <li>Support Google Pay / Apple Pay</li>
+                    <li>Mode test et production</li>
+                </ul>
+            </li>
+            <li>Page de confirmation de commande</li>
+            <li>Génération automatique de factures PDF</li>
+            <li>Envoi d'emails de confirmation</li>
+            <li>Historique des commandes</li>
+            <li>Suivi de livraison</li>
+        </ul>
+        <div class="time-box">Temps de développement : 3 jours</div>
+
+        <h3>2.7 Gestion du Profil</h3>
+
+        <h4>Mon Profil</h4>
+        <ul>
+            <li>Modification des informations personnelles :
+                <ul>
+                    <li>Civilité, nom, prénom</li>
+                    <li>Email (avec vérification)</li>
+                    <li>Téléphone</li>
+                    <li>Adresse de facturation</li>
+                    <li>Adresse de livraison</li>
+                </ul>
+            </li>
+            <li>Gestion du mot de passe</li>
+            <li>Préférences de communication (newsletters, notifications)</li>
+            <li>Données de parrainage (code parrain, filleuls)</li>
+            <li>Option de suppression de compte (RGPD)</li>
+        </ul>
+        <div class="time-box">Temps de développement : 2 jours</div>
+
+        <h3>2.8 Système de Rendez-vous</h3>
+
+        <h4>Prise de Rendez-vous</h4>
+        <ul>
+            <li>Calendrier interactif de prise de rendez-vous</li>
+            <li>Affichage des créneaux disponibles</li>
+            <li>Sélection de date et heure</li>
+            <li>Confirmation par email</li>
+            <li>Rappels automatiques (48h et 24h avant)</li>
+            <li>Gestion des annulations/reports</li>
+            <li>Synchronisation avec le CRM admin</li>
+        </ul>
+        <div class="time-box">Temps de développement : 3 jours</div>
+
+        <div class="page-break"></div>
+
+        <h2>3. FONCTIONNALITÉS TECHNIQUES</h2>
+
+        <h3>3.1 Architecture du Plugin</h3>
+        <ul>
+            <li><strong>Architecture orientée objet</strong> (POO) moderne</li>
+            <li><strong>Namespace PHP</strong> pour éviter les conflits</li>
+            <li><strong>Hooks et filtres WordPress</strong> pour extensibilité</li>
+            <li><strong>REST API personnalisée</strong> pour les interactions AJAX</li>
+            <li><strong>Nonces WordPress</strong> pour sécurité CSRF</li>
+            <li><strong>Sanitization et validation</strong> de toutes les données</li>
+            <li><strong>Coding standards WordPress</strong> (PHPCS, WPCS)</li>
+            <li><strong>Compatibilité multisite</strong></li>
+            <li><strong>Traductions prêtes</strong> (i18n/l10n)</li>
+        </ul>
+
+        <h3>3.2 Base de Données</h3>
+        <ul>
+            <li><strong>Tables personnalisées</strong> optimisées :
+                <ul>
+                    <li><code>mpf_investments</code> - Investissements</li>
+                    <li><code>mpf_contracts</code> - Contrats</li>
+                    <li><code>mpf_commissions</code> - Commissions de parrainage</li>
+                    <li><code>mpf_harvests</code> - Récoltes</li>
+                    <li><code>mpf_orders</code> - Commandes</li>
+                    <li><code>mpf_documents</code> - Documents</li>
+                    <li><code>mpf_appointments</code> - Rendez-vous</li>
+                </ul>
+            </li>
+            <li><strong>Relations optimisées</strong> avec foreign keys</li>
+            <li><strong>Indexes</strong> pour performance</li>
+            <li><strong>Scripts de migration</strong> depuis l'ancienne base</li>
+            <li><strong>Système de backup</strong> automatique</li>
+        </ul>
+        <div class="time-box">Temps de développement : 2 jours</div>
+
+        <h3>3.3 Interface Utilisateur</h3>
+        <ul>
+            <li><strong>Design responsive</strong> (mobile, tablette, desktop)</li>
+            <li><strong>Thème personnalisable</strong> (couleurs, logos)</li>
+            <li><strong>Shortcodes WordPress</strong> pour intégration facile</li>
+            <li><strong>Blocks Gutenberg</strong> pour les fonctionnalités principales</li>
+            <li><strong>AJAX</strong> pour interactions fluides sans rechargement</li>
+            <li><strong>Animations et transitions</strong> modernes</li>
+            <li><strong>Accessibilité</strong> WCAG 2.1 niveau AA</li>
+            <li><strong>Compatible avec les principaux thèmes WordPress</strong></li>
+        </ul>
+        <div class="time-box">Temps de développement : 3 jours</div>
+
+        <h3>3.4 Sécurité</h3>
+        <ul>
+            <li><strong>Échappement de toutes les sorties</strong> (XSS prevention)</li>
+            <li><strong>Préparation des requêtes SQL</strong> (injection prevention)</li>
+            <li><strong>Vérification des capacités utilisateur</strong></li>
+            <li><strong>Nonces sur tous les formulaires</strong></li>
+            <li><strong>Rate limiting</strong> sur les actions sensibles</li>
+            <li><strong>Chiffrement des données sensibles</strong></li>
+            <li><strong>Logs d'audit</strong> pour actions critiques</li>
+            <li><strong>Conformité OWASP Top 10</strong></li>
+        </ul>
+
+        <h3>3.5 Intégrations Externes</h3>
+
+        <h4>Stripe</h4>
+        <ul>
+            <li>Configuration centralisée (clés API)</li>
+            <li>Mode test et production</li>
+            <li>Webhooks pour synchronisation</li>
+            <li>Gestion des erreurs et refus</li>
+            <li>Support des remboursements</li>
+            <li>Reçus automatiques</li>
+        </ul>
+        <div class="time-box">Temps de développement : 2 jours</div>
+
+        <h4>Emails Transactionnels</h4>
+        <ul>
+            <li>Templates HTML professionnels</li>
+            <li>Variables dynamiques</li>
+            <li>Support SMTP (IONOS, SendGrid, etc.)</li>
+            <li>File d'attente pour envois massifs</li>
+            <li>Logs d'envoi</li>
+            <li>Gestion des bounces</li>
+        </ul>
+        <div class="time-box">Temps de développement : 1,5 jour</div>
+
+        <h4>Génération de PDF</h4>
+        <ul>
+            <li>DomPDF ou TCPDF intégré</li>
+            <li>Templates de contrats personnalisables</li>
+            <li>Templates de factures</li>
+            <li>Génération de bulletins</li>
+            <li>Filigrane et numérotation</li>
+            <li>Signature électronique</li>
+        </ul>
+        <div class="time-box">Temps de développement : 2 jours</div>
+
+        <div class="page-break"></div>
+
+        <h2>4. ADMINISTRATION</h2>
+
+        <h3>4.1 Panneau d'Administration WordPress</h3>
+        <ul>
+            <li><strong>Menu dédié</strong> "Mon Plant Fraise" dans le back-office</li>
+            <li><strong>Dashboard admin</strong> avec statistiques globales :
+                <ul>
+                    <li>Nombre d'investisseurs</li>
+                    <li>Montant total investi</li>
+                    <li>Commandes en cours</li>
+                    <li>Rendez-vous à venir</li>
+                </ul>
+            </li>
+            <li><strong>Gestion des investissements</strong> (liste, édition, suppression)</li>
+            <li><strong>Gestion des contrats</strong> (validation, génération)</li>
+            <li><strong>Gestion des récoltes</strong> (saisie, distribution)</li>
+            <li><strong>Gestion des commandes</strong> (traitement, expédition)</li>
+            <li><strong>Gestion des commissions</strong> (calcul, paiement)</li>
+            <li><strong>Gestion des rendez-vous</strong> (planning, confirmation)</li>
+            <li><strong>Export de données</strong> (Excel, CSV)</li>
+            <li><strong>Configuration du plugin</strong> (paramètres globaux)</li>
+        </ul>
+        <div class="time-box">Temps de développement : 4 jours</div>
+
+        <h3>4.2 Paramètres du Plugin</h3>
+        <ul>
+            <li><strong>Configuration Stripe</strong> (clés API test/production)</li>
+            <li><strong>Configuration email</strong> (SMTP, templates)</li>
+            <li><strong>Paramètres de parrainage</strong> (taux de commission)</li>
+            <li><strong>Configuration des contrats</strong> (durée, rendement)</li>
+            <li><strong>Paramètres des rendez-vous</strong> (créneaux, durée)</li>
+            <li><strong>Options de notification</strong> (emails, alertes)</li>
+            <li><strong>Configuration des produits</strong> (catalogue, prix)</li>
+            <li><strong>Personnalisation de l'interface</strong> (couleurs, logos)</li>
+        </ul>
+        <div class="time-box">Temps de développement : 1,5 jour</div>
+
+        <h2>5. MIGRATION DES DONNÉES</h2>
+
+        <h3>5.1 Migration depuis l'Ancienne Base</h3>
+        <ul>
+            <li><strong>Analyse de la structure</strong> de l'ancienne base MySQL</li>
+            <li><strong>Scripts de migration automatisés</strong> :
+                <ul>
+                    <li>Utilisateurs et profils</li>
+                    <li>Investissements historiques</li>
+                    <li>Contrats existants</li>
+                    <li>Commissions passées</li>
+                    <li>Commandes antérieures</li>
+                    <li>Documents archivés</li>
+                </ul>
+            </li>
+            <li><strong>Validation des données</strong> migrées</li>
+            <li><strong>Tests de cohérence</strong></li>
+            <li><strong>Rapport de migration</strong> détaillé</li>
+        </ul>
+        <div class="time-box">Temps de développement : 3 jours</div>
+
+        <h3>5.2 Import de Données</h3>
+        <ul>
+            <li><strong>Interface d'import</strong> CSV/Excel</li>
+            <li><strong>Mapping de colonnes</strong> flexible</li>
+            <li><strong>Validation en temps réel</strong></li>
+            <li><strong>Import progressif</strong> (batch processing)</li>
+            <li><strong>Logs d'import</strong> détaillés</li>
+            <li><strong>Rollback en cas d'erreur</strong></li>
+        </ul>
+        <div class="time-box">Temps de développement : 1,5 jour</div>
+
+        <h2>6. TESTS ET QUALITÉ</h2>
+
+        <h3>6.1 Tests Unitaires</h3>
+        <ul>
+            <li>Tests PHPUnit pour fonctions critiques</li>
+            <li>Couverture de code > 70%</li>
+            <li>Tests des calculs financiers</li>
+            <li>Tests des webhooks Stripe</li>
+        </ul>
+        <div class="time-box">Temps de développement : 2 jours</div>
+
+        <h3>6.2 Tests d'Intégration</h3>
+        <ul>
+            <li>Tests de bout en bout des parcours utilisateur</li>
+            <li>Tests des paiements (mode test Stripe)</li>
+            <li>Tests de génération de documents</li>
+            <li>Tests d'envoi d'emails</li>
+        </ul>
+        <div class="time-box">Temps de développement : 2 jours</div>
+
+        <h3>6.3 Tests de Sécurité</h3>
+        <ul>
+            <li>Audit OWASP Top 10</li>
+            <li>Tests d'injection SQL</li>
+            <li>Tests XSS</li>
+            <li>Tests CSRF</li>
+            <li>Scan de vulnérabilités</li>
+        </ul>
+        <div class="time-box">Temps de développement : 1,5 jour</div>
+
+        <h3>6.4 Tests de Performance</h3>
+        <ul>
+            <li>Tests de charge (100+ utilisateurs simultanés)</li>
+            <li>Optimisation des requêtes SQL</li>
+            <li>Mise en cache</li>
+            <li>Compression des assets</li>
+        </ul>
+        <div class="time-box">Temps de développement : 1,5 jour</div>
+
+        <h2>7. DOCUMENTATION</h2>
+
+        <h3>7.1 Documentation Utilisateur</h3>
+        <ul>
+            <li>Guide d'utilisation illustré (PDF)</li>
+            <li>Tutoriels vidéo pour fonctionnalités principales</li>
+            <li>FAQ détaillée</li>
+            <li>Guide de dépannage</li>
+        </ul>
+        <div class="time-box">Temps de développement : 2 jours</div>
+
+        <h3>7.2 Documentation Technique</h3>
+        <ul>
+            <li>Documentation du code (PHPDoc)</li>
+            <li>Guide d'installation</li>
+            <li>Guide de configuration</li>
+            <li>Documentation API REST</li>
+            <li>Guide de maintenance</li>
+        </ul>
+        <div class="time-box">Temps de développement : 1,5 jour</div>
+
+        <h2>8. DÉPLOIEMENT ET FORMATION</h2>
+
+        <h3>8.1 Déploiement</h3>
+        <ul>
+            <li>Installation sur serveur de production</li>
+            <li>Configuration des clés API</li>
+            <li>Migration des données</li>
+            <li>Tests post-déploiement</li>
+            <li>Mise en production</li>
+        </ul>
+        <div class="time-box">Temps de développement : 1 jour</div>
+
+        <h3>8.2 Formation</h3>
+        <ul>
+            <li>Formation administrateur (2h)</li>
+            <li>Formation utilisateur (support vidéo)</li>
+            <li>Documentation de prise en main</li>
+        </ul>
+        <div class="time-box">Temps de développement : 1 jour</div>
+
+        <div class="page-break"></div>
+
+        <h2>9. PLANNING DE DÉVELOPPEMENT</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Phase</th>
+                    <th>Durée</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Phase 1 : Fondations</strong></td>
+                    <td>5 jours</td>
+                    <td>Architecture, base de données, authentification</td>
+                </tr>
+                <tr>
+                    <td><strong>Phase 2 : Espace Investisseur</strong></td>
+                    <td>8 jours</td>
+                    <td>Dashboard, portefeuille, documents, récoltes</td>
+                </tr>
+                <tr>
+                    <td><strong>Phase 3 : Parrainage</strong></td>
+                    <td>5 jours</td>
+                    <td>Système de parrainage et commissions</td>
+                </tr>
+                <tr>
+                    <td><strong>Phase 4 : E-commerce</strong></td>
+                    <td>6 jours</td>
+                    <td>Boutique, panier, paiement Stripe</td>
+                </tr>
+                <tr>
+                    <td><strong>Phase 5 : Rendez-vous</strong></td>
+                    <td>3 jours</td>
+                    <td>Système de prise de rendez-vous</td>
+                </tr>
+                <tr>
+                    <td><strong>Phase 6 : Administration</strong></td>
+                    <td>5,5 jours</td>
+                    <td>Back-office et configuration</td>
+                </tr>
+                <tr>
+                    <td><strong>Phase 7 : Migration</strong></td>
+                    <td>4,5 jours</td>
+                    <td>Migration données et import</td>
+                </tr>
+                <tr>
+                    <td><strong>Phase 8 : Tests</strong></td>
+                    <td>7 jours</td>
+                    <td>Tests unitaires, intégration, sécurité, performance</td>
+                </tr>
+                <tr>
+                    <td><strong>Phase 9 : Documentation</strong></td>
+                    <td>3,5 jours</td>
+                    <td>Documentation utilisateur et technique</td>
+                </tr>
+                <tr>
+                    <td><strong>Phase 10 : Déploiement</strong></td>
+                    <td>2 jours</td>
+                    <td>Mise en production et formation</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="highlight-box">
+            <strong>TOTAL : 50 jours de développement</strong>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>10. CHIFFRAGE DÉTAILLÉ</h2>
+
+        <h3>10.1 Développement du Plugin</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Poste</th>
+                    <th>Jours</th>
+                    <th>TJM</th>
+                    <th>Montant</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Authentification et Compte</strong></td>
+                    <td>3,5</td>
+                    <td>400€</td>
+                    <td>1 400€</td>
+                </tr>
+                <tr>
+                    <td><strong>Dashboard Investisseur</strong></td>
+                    <td>3</td>
+                    <td>400€</td>
+                    <td>1 200€</td>
+                </tr>
+                <tr>
+                    <td><strong>Gestion du Portefeuille</strong></td>
+                    <td>2,5</td>
+                    <td>400€</td>
+                    <td>1 000€</td>
+                </tr>
+                <tr>
+                    <td><strong>Système de Parrainage</strong></td>
+                    <td>5</td>
+                    <td>400€</td>
+                    <td>2 000€</td>
+                </tr>
+                <tr>
+                    <td><strong>Gestion des Documents</strong></td>
+                    <td>5</td>
+                    <td>400€</td>
+                    <td>2 000€</td>
+                </tr>
+                <tr>
+                    <td><strong>Suivi des Récoltes</strong></td>
+                    <td>2,5</td>
+                    <td>400€</td>
+                    <td>1 000€</td>
+                </tr>
+                <tr>
+                    <td><strong>Boutique et Produits</strong></td>
+                    <td>3</td>
+                    <td>400€</td>
+                    <td>1 200€</td>
+                </tr>
+                <tr>
+                    <td><strong>Paiement Stripe</strong></td>
+                    <td>3</td>
+                    <td>400€</td>
+                    <td>1 200€</td>
+                </tr>
+                <tr>
+                    <td><strong>Gestion du Profil</strong></td>
+                    <td>2</td>
+                    <td>400€</td>
+                    <td>800€</td>
+                </tr>
+                <tr>
+                    <td><strong>Système de Rendez-vous</strong></td>
+                    <td>3</td>
+                    <td>400€</td>
+                    <td>1 200€</td>
+                </tr>
+                <tr>
+                    <td><strong>Base de Données</strong></td>
+                    <td>2</td>
+                    <td>400€</td>
+                    <td>800€</td>
+                </tr>
+                <tr>
+                    <td><strong>Interface Utilisateur</strong></td>
+                    <td>3</td>
+                    <td>400€</td>
+                    <td>1 200€</td>
+                </tr>
+                <tr>
+                    <td><strong>Intégrations (Stripe, Email, PDF)</strong></td>
+                    <td>5,5</td>
+                    <td>400€</td>
+                    <td>2 200€</td>
+                </tr>
+                <tr>
+                    <td><strong>Administration WordPress</strong></td>
+                    <td>5,5</td>
+                    <td>400€</td>
+                    <td>2 200€</td>
+                </tr>
+                <tr>
+                    <td><strong>Migration des Données</strong></td>
+                    <td>4,5</td>
+                    <td>400€</td>
+                    <td>1 800€</td>
+                </tr>
+                <tr>
+                    <td><strong>Tests (unitaires, intégration, sécurité)</strong></td>
+                    <td>7</td>
+                    <td>400€</td>
+                    <td>2 800€</td>
+                </tr>
+                <tr>
+                    <td><strong>Documentation</strong></td>
+                    <td>3,5</td>
+                    <td>400€</td>
+                    <td>1 400€</td>
+                </tr>
+                <tr>
+                    <td><strong>Déploiement et Formation</strong></td>
+                    <td>2</td>
+                    <td>400€</td>
+                    <td>800€</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="success-box">
+            <strong>Sous-total Développement : 26 000€</strong>
+        </div>
+
+        <h3>10.2 Gestion de Projet</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Poste</th>
+                    <th>Description</th>
+                    <th>Montant</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Chef de projet</strong></td>
+                    <td>Coordination, suivi, reporting (10% du développement)</td>
+                    <td>2 600€</td>
+                </tr>
+                <tr>
+                    <td><strong>Réunions et communication</strong></td>
+                    <td>Points hebdomadaires, validation</td>
+                    <td>800€</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="success-box">
+            <strong>Sous-total Gestion : 3 400€</strong>
+        </div>
+
+        <h3>10.3 Outils et Licences</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Poste</th>
+                    <th>Description</th>
+                    <th>Montant</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Environnement de développement</strong></td>
+                    <td>Serveurs de test, staging</td>
+                    <td>300€</td>
+                </tr>
+                <tr>
+                    <td><strong>Outils de tests</strong></td>
+                    <td>Tests de charge, sécurité</td>
+                    <td>200€</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="success-box">
+            <strong>Sous-total Outils : 500€</strong>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2>11. RÉCAPITULATIF DES COÛTS</h2>
+
+        <div class="cost-summary">
+┌────────────────────────────────────────────────────────┐
+│                   COÛT TOTAL DU PROJET                 │
+├────────────────────────────────────────────────────────┤
+│  Développement du plugin           26 000€             │
+│  Gestion de projet                  3 400€             │
+│  Outils et licences                   500€             │
+├────────────────────────────────────────────────────────┤
+│  <strong>TOTAL HT                          29 900€</strong>             │
+│  <strong>TVA 20%                            5 980€</strong>             │
+│  <strong>TOTAL TTC                         35 880€</strong>             │
+└────────────────────────────────────────────────────────┘
+
+<strong>Délai de réalisation : 50 jours ouvrés (10 semaines)</strong>
+        </div>
+
+        <h2>12. MAINTENANCE ET SUPPORT</h2>
+
+        <h3>12.1 Garantie Incluse</h3>
+        <ul>
+            <li><strong>Garantie de 3 mois</strong> après livraison</li>
+            <li>Correction de bugs sans surcoût</li>
+            <li>Support technique par email</li>
+            <li>Temps de réponse : 48h ouvrées</li>
+        </ul>
+
+        <h3>12.2 Maintenance Annuelle (Optionnelle)</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Formule</th>
+                    <th>Description</th>
+                    <th>Prix/an</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Basique</strong></td>
+                    <td>Mises à jour de sécurité, corrections de bugs, support email</td>
+                    <td>1 500€</td>
+                </tr>
+                <tr>
+                    <td><strong>Standard</strong></td>
+                    <td>Basique + mises à jour WordPress, évolutions mineures (5h/mois)</td>
+                    <td>3 000€</td>
+                </tr>
+                <tr>
+                    <td><strong>Premium</strong></td>
+                    <td>Standard + monitoring 24/7, support prioritaire, évolutions (10h/mois)</td>
+                    <td>6 000€</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>13. MODALITÉS DE PAIEMENT</h2>
+
+        <h3>13.1 Échéancier</h3>
+        <ul>
+            <li><strong>30% à la signature</strong> (10 464€ TTC) - Démarrage du projet</li>
+            <li><strong>40% à mi-parcours</strong> (14 352€ TTC) - Validation des fonctionnalités principales</li>
+            <li><strong>30% à la livraison</strong> (10 764€ TTC) - Mise en production</li>
+        </ul>
+
+        <h3>13.2 Moyens de Paiement</h3>
+        <ul>
+            <li>Virement bancaire</li>
+            <li>Chèque</li>
+            <li>Conditions de paiement : 30 jours net</li>
+        </ul>
+
+        <h2>14. CONDITIONS GÉNÉRALES</h2>
+
+        <h3>14.1 Propriété Intellectuelle</h3>
+        <ul>
+            <li>Le plugin développé est la <strong>propriété exclusive du client</strong></li>
+            <li>Le code source est livré dans son intégralité</li>
+            <li>Licence GPL v2+ (compatible WordPress)</li>
+            <li>Droit d'utilisation illimité</li>
+        </ul>
+
+        <h3>14.2 Évolutions</h3>
+        <p>Toute demande d'évolution hors périmètre défini fera l'objet d'un devis complémentaire sur la base du TJM de 400€.</p>
+
+        <h3>14.3 Délais</h3>
+        <p>Le planning annoncé est indicatif et débute à réception de l'acompte et de tous les éléments nécessaires (accès serveur, contenus, identifiants API).</p>
+
+        <h3>14.4 Validation</h3>
+        <p>Le client s'engage à valider les livrables dans un délai de 5 jours ouvrés. Passé ce délai sans retour, les livrables seront considérés comme validés.</p>
+
+        <h3>14.5 Annulation</h3>
+        <p>En cas d'annulation du projet par le client, les montants déjà versés restent acquis au prestataire au prorata des travaux effectués.</p>
+
+        <h2>15. LIVRABLES</h2>
+
+        <p>À l'issue du projet, le client recevra :</p>
+
+        <ul class="deliverable-list">
+            <li><strong>Plugin WordPress complet</strong> (fichier ZIP installable)</li>
+            <li><strong>Code source commenté</strong> (GitHub/GitLab)</li>
+            <li><strong>Base de données</strong> (schéma et scripts de création)</li>
+            <li><strong>Scripts de migration</strong> des données</li>
+            <li><strong>Documentation technique</strong> (PDF + online)</li>
+            <li><strong>Documentation utilisateur</strong> (PDF)</li>
+            <li><strong>Tutoriels vidéo</strong> (liens YouTube/Vimeo)</li>
+            <li><strong>Rapport de tests</strong> (sécurité, performance)</li>
+            <li><strong>Guide d'installation et configuration</strong> (PDF)</li>
+            <li><strong>Support pendant 3 mois</strong> (email)</li>
+        </ul>
+
+        <div class="page-break"></div>
+
+        <h2>16. COORDONNÉES</h2>
+
+        <div class="info-box">
+            <strong>Prestataire :</strong><br>
+            [Votre Société]<br>
+            [Adresse]<br>
+            [Téléphone]<br>
+            [Email]<br>
+            [SIRET]
+        </div>
+
+        <h2>17. SIGNATURE</h2>
+
+        <div class="signature-section">
+            <div class="signature-block">
+                <h3>Le Client (MPF Group)</h3>
+                <p>Nom : ______________________________</p>
+                <p class="signature-line">Signature :</p>
+                <p>Date : ______________________________</p>
+            </div>
+
+            <div class="signature-block">
+                <h3>Le Prestataire</h3>
+                <p>Nom : ______________________________</p>
+                <p class="signature-line">Signature :</p>
+                <p>Date : ______________________________</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            Fait en deux exemplaires, le 18 novembre 2025<br>
+            Devis valable 30 jours à compter de la date d'émission
+        </div>
+    </div>
+</body>
+</html>
