@@ -272,16 +272,16 @@ WordPress + WooCommerce couvre **100% des besoins** de MPF :
 
 #### Coût estimé
 
-**Setup initial**
-- Hébergement WordPress optimisé : 20-50€/mois
-- Thème premium : 60€/an
-- Extensions professionnelles : ~1 000€/an
-- Configuration/intégration : 10-15 jours dev
-- Import données + formation : 3-5 jours
+**Développement complet**
+- Configuration et personnalisation WordPress
+- Installation et configuration WooCommerce
+- Intégration extensions professionnelles
+- Migration données existantes
+- Formation équipe et documentation
 
-**Total première année :** 10 000€ - 15 000€ (dev + licences + hosting)
+**Total développement :** 4 000€
 
-**Années suivantes :** 2 000€ - 3 000€/an (licences + maintenance)
+**Maintenance annuelle :** 100€/an (hébergement et mises à jour)
 
 #### Migration concrète vers WordPress
 
@@ -321,7 +321,7 @@ WordPress + WooCommerce couvre **100% des besoins** de MPF :
 - Formation administrateurs
 - Documentation
 
-**Total : 25 jours = 10 000€ - 15 000€**
+**Total développement : 4 000€**
 
 #### Recommandation
 ✅ **MEILLEUR CHOIX pour Mon Plant Fraise**
@@ -368,24 +368,24 @@ WordPress est la solution parfaite car :
 
 #### Inconvénients
 - ⚠️ Développement initial long (8-12 semaines)
-- ⚠️ Coût élevé (25-35k€)
+- ⚠️ Coût plus élevé (10k€)
 - ⚠️ Nécessite équipe technique permanente
 - ⚠️ Courbe d'apprentissage
 - ⚠️ Maintenance technique complexe
 
 #### Coût estimé
 
-**Développement initial : 40-60 jours** (20 000€ - 35 000€)
-- Setup + architecture : 3-5 jours
-- Migration BDD : 3-5 jours
-- Authentification : 5-7 jours
-- Investissement : 10-12 jours
-- Stripe : 3-5 jours
-- Espace client : 7-10 jours
-- CRM Admin : 5-7 jours
-- Tests + déploiement : 5-7 jours
+**Développement initial :** 10 000€
+- Setup + architecture
+- Migration BDD
+- Authentification
+- Système d'investissement
+- Intégration Stripe
+- Espace client
+- CRM Admin
+- Tests + déploiement
 
-**Maintenance annuelle :** 5-8k€
+**Maintenance annuelle :** 1 000€/an
 
 #### Recommandation
 ⚠️ **Solution sur-dimensionnée pour MPF**
@@ -421,8 +421,8 @@ Laravel serait pertinent uniquement si :
 | Critère | WordPress | Laravel | PHP Natif |
 |---------|-----------|---------|-----------|
 | **Délai lancement** | **4-6 semaines** | 8-12 semaines | 3 semaines |
-| **Coût initial** | **10-15k€** | 25-35k€ | 6-10k€ |
-| **Maintenance/an** | **2-3k€** | 5-8k€ | Élevé |
+| **Coût initial** | **4k€** | 10k€ | 6-10k€ |
+| **Maintenance/an** | **100€** | 1k€ | Élevé |
 | **Autonomie équipe** | **⭐⭐⭐⭐⭐** | ⭐⭐ | ⭐ |
 | **Facilité recrutement** | **⭐⭐⭐⭐⭐** | ⭐⭐⭐ | ⭐ |
 | **Features prêtes** | **⭐⭐⭐⭐⭐** | ⭐⭐ | ⭐ |
@@ -535,13 +535,13 @@ Ajouts futurs faciles :
 
 | Coût | WordPress | Laravel | PHP Natif |
 |------|-----------|---------|-----------|
-| Année 1 | 12k€ | 30k€ | 8k€ |
-| Année 2 | 3k€ | 6k€ | 12k€ |
-| Année 3 | 3k€ | 6k€ | 15k€ |
-| **Total** | **18k€** | **42k€** | **35k€** |
+| Année 1 | 4,5k€ | 11k€ | 8k€ |
+| Année 2 | 100€ | 1k€ | 12k€ |
+| Année 3 | 100€ | 1k€ | 15k€ |
+| **Total** | **4,7k€** | **13k€** | **35k€** |
 
-WordPress = **57% moins cher** que Laravel sur 3 ans
-WordPress = **49% moins cher** que maintenir PHP natif
+WordPress = **64% moins cher** que Laravel sur 3 ans
+WordPress = **87% moins cher** que maintenir PHP natif
 
 ### 6.3 Plan d'action recommandé
 
@@ -552,7 +552,7 @@ WordPress = **49% moins cher** que maintenir PHP natif
 4. ⚠️ Mettre site actuel hors ligne
 
 **Phase 2 : Décision (Semaine 2)**
-1. Validation budget 12-15k€
+1. Validation budget 4k€ pour migration WordPress
 2. Sélection agence WordPress spécialisée WooCommerce
 3. Audit juridique crowdfunding (AMF)
 4. Validation cahier des charges
@@ -656,10 +656,10 @@ Le projet Mon Plant Fraise est **ambitieux et viable** sur le plan métier, mais
 - Conformité RGPD native
 
 **4. Rentabilité maximale**
-- Coût initial : 10-15k€ (vs 25-35k€ Laravel)
-- Maintenance : 2-3k€/an
+- Coût initial : 4k€ (vs 10k€ Laravel)
+- Maintenance : 100€/an
 - ROI dès la première année
-- 57% moins cher que Laravel sur 3 ans
+- 64% moins cher que Laravel sur 3 ans
 
 **5. Time to market optimal**
 - Lancement en 4-6 semaines
@@ -680,7 +680,7 @@ Le projet Mon Plant Fraise est **ambitieux et viable** sur le plan métier, mais
 - Mettre site en maintenance
 
 **📋 Cette semaine (J+1 à J+7)**
-- Valider budget 12-15k€ pour migration WordPress
+- Valider budget 4k€ pour migration WordPress
 - Sélectionner agence WordPress spécialisée WooCommerce
 - Consulter avocat crowdfunding (AMF)
 
