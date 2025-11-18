@@ -543,90 +543,9 @@ Ajouts futurs faciles :
 WordPress = **64% moins cher** que Laravel sur 3 ans
 WordPress = **87% moins cher** que maintenir PHP natif
 
-### 6.3 Plan d'action recommandé
-
-**Phase 1 : Urgence (Semaine 1)**
-1. ⚠️ Révoquer clé Stripe actuelle
-2. ⚠️ Changer passwords MySQL
-3. ⚠️ Créer fichier `.env` temporaire
-4. ⚠️ Mettre site actuel hors ligne
-
-**Phase 2 : Décision (Semaine 2)**
-1. Validation budget 4k€ pour migration WordPress
-2. Sélection agence WordPress spécialisée WooCommerce
-3. Audit juridique crowdfunding (AMF)
-4. Validation cahier des charges
-
-**Phase 3 : Migration WordPress (Semaines 3-8)**
-1. Infrastructure + sécurité (3-5 jours)
-2. Migration données (5-7 jours)
-3. Configuration fonctionnalités (10-12 jours)
-4. Tests + formation (5 jours)
-
-**Phase 4 : Lancement (Semaine 9)**
-1. Beta test utilisateurs pilotes
-2. Corrections finales
-3. Go live
-4. Monitoring
-
 ---
 
-## 7. Aspects légaux à ne pas négliger
-
-### 7.1 Régulation du crowdfunding
-
-⚠️ **Point critique :** Le projet MPF est potentiellement soumis à régulation AMF.
-
-**En France (AMF - Autorité des Marchés Financiers)**
-
-Le crowdfunding est encadré si :
-- ✅ Collecte de fonds auprès du public
-- ✅ Promesse de rendement financier
-- ✅ Montants > seuils réglementaires
-
-**Statuts possibles :**
-
-1. **IFP (Intermédiaire en Financement Participatif)**
-   - Si prêts ou dons avec contrepartie
-   - Immatriculation ORIAS obligatoire
-
-2. **CIP (Conseiller en Investissement Participatif)**
-   - Si investissement en capital/titres
-   - Agrément AMF requis
-
-3. **PSI (Prestataire de Services d'Investissement)**
-   - Si montants > 8M€/projet
-
-**Exemptions possibles :**
-- Modèle "pré-achat" pur (pas d'investissement)
-- Montants très faibles (< 1M€ total)
-
-### 7.2 Actions juridiques requises
-
-**Avant lancement :**
-- [ ] Consultation avocat spécialisé fintech/crowdfunding
-- [ ] Clarification du modèle juridique (investissement vs prévente)
-- [ ] Vérification besoin d'immatriculation ORIAS
-- [ ] Rédaction CGU/CGV conformes
-- [ ] Mentions légales complètes
-- [ ] DIC (Document d'Information Clé) si requis
-
-**RGPD :**
-- [ ] Politique de confidentialité détaillée
-- [ ] Registre des traitements
-- [ ] Base légale pour chaque traitement
-- [ ] Consentement explicite (cases à cocher)
-- [ ] Droit à l'oubli implémenté
-- [ ] DPO désigné (si > 250 personnes)
-
-**Contrats :**
-- [ ] Validation template contrat par avocat
-- [ ] Signature électronique qualifiée (eIDAS)
-- [ ] Conservation sécurisée (10 ans minimum)
-
----
-
-## 8. Conclusion et recommandation finale
+## 6. Conclusion et recommandation finale
 
 ### Synthèse
 
@@ -672,43 +591,11 @@ Le projet Mon Plant Fraise est **ambitieux et viable** sur le plan métier, mais
 - Gestion sans développeur
 - Recrutement ultra facile
 
-### Plan d'action immédiat
-
-**🚨 Aujourd'hui (J+0)**
-- Révoquer clé Stripe `sk_live_51PDu...`
-- Changer password MySQL `24021993Ab`
-- Mettre site en maintenance
-
-**📋 Cette semaine (J+1 à J+7)**
-- Valider budget 4k€ pour migration WordPress
-- Sélectionner agence WordPress spécialisée WooCommerce
-- Consulter avocat crowdfunding (AMF)
-
-**🔨 Mois 1-2**
-- Migration complète WordPress
-- Tests et formation
-- Soft launch beta testeurs
-
-**🚀 Mois 3**
-- Lancement public
-- Monitoring et optimisations
-
 ### ⚠️ À ne surtout PAS faire
 
 - ❌ Lancer en production avec code actuel (risque majeur)
 - ❌ Investir dans sécurisation PHP natif (dette technique)
 - ❌ Choisir Laravel (sur-dimensionné et sur-coûteux pour MPF)
-- ❌ Négliger aspect juridique crowdfunding (amendes lourdes)
-
----
-
-**Prochaines étapes suggérées :**
-
-1. Présentation de cette note aux décideurs
-2. Validation budget et timing
-3. Go/No-Go sur migration WordPress
-4. Sélection prestataire WordPress
-5. Consultation juridique parallèle
 
 ---
 
