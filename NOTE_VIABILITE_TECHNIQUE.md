@@ -248,8 +248,8 @@ WordPress + WooCommerce couvre **100% des besoins** de MPF :
 #### Avantages
 
 **Business**
-- ✅ **Time to market ultra rapide** : 4-6 semaines
-- ✅ **Coût initial optimal** : 10-15k€ tout compris
+- ✅ **Time to market ultra rapide** : 18 jours de développement
+- ✅ **Coût initial optimal** : 4 000€ tout compris
 - ✅ **Interface familière** : tout le monde connaît WordPress
 - ✅ **Formation simple** : administrateurs autonomes en quelques heures
 - ✅ **Évolutivité illimitée** : milliers d'extensions disponibles
@@ -272,7 +272,7 @@ WordPress + WooCommerce couvre **100% des besoins** de MPF :
 
 #### Coût estimé
 
-**Développement complet**
+**Développement complet (18 jours)**
 - Configuration et personnalisation WordPress
 - Installation et configuration WooCommerce
 - Intégration extensions professionnelles
@@ -285,43 +285,43 @@ WordPress + WooCommerce couvre **100% des besoins** de MPF :
 
 #### Migration concrète vers WordPress
 
-**Étape 1 : Architecture (3 jours)**
+**Étape 1 : Architecture (2 jours)**
 - Installation WordPress + WooCommerce
 - Configuration sécurité professionnelle
 - Thème premium + personnalisation
 - Installation extensions essentielles
 
-**Étape 2 : Migration données (5 jours)**
+**Étape 2 : Migration données (4 jours)**
 - Export MySQL actuel
 - Import utilisateurs WordPress
 - Import historique commandes
 - Migration documents
 
-**Étape 3 : Configuration e-commerce (4 jours)**
+**Étape 3 : Configuration e-commerce (3 jours)**
 - Création produits (offres de parrainage)
 - Configuration Stripe + webhooks
 - Système d'affiliation
 - Emails transactionnels
 
-**Étape 4 : Espace membre (5 jours)**
+**Étape 4 : Espace membre (4 jours)**
 - Configuration système de membership
 - Dashboards personnalisés
 - Restrictions d'accès
 - Documents contractuels
 
-**Étape 5 : CRM/Admin (3 jours)**
+**Étape 5 : CRM/Admin (2 jours)**
 - Configuration CRM
 - Import contacts
 - Workflows emails automatiques
 - Formation équipe
 
-**Étape 6 : Tests + Formation (5 jours)**
+**Étape 6 : Tests + Formation (3 jours)**
 - Tests paiements complets
 - Scénarios utilisateurs
 - Formation administrateurs
 - Documentation
 
-**Total développement : 4 000€**
+**Total développement : 18 jours = 4 000€**
 
 #### Recommandation
 ✅ **MEILLEUR CHOIX pour Mon Plant Fraise**
@@ -420,7 +420,7 @@ Laravel serait pertinent uniquement si :
 
 | Critère | WordPress | Laravel | PHP Natif |
 |---------|-----------|---------|-----------|
-| **Délai lancement** | **4-6 semaines** | 8-12 semaines | 3 semaines |
+| **Délai lancement** | **18 jours** | 8-12 semaines | 3 semaines |
 | **Coût initial** | **4k€** | 10k€ | 6-10k€ |
 | **Maintenance/an** | **100€** | 1k€ | Élevé |
 | **Autonomie équipe** | **⭐⭐⭐⭐⭐** | ⭐⭐ | ⭐ |
@@ -581,7 +581,7 @@ Le projet Mon Plant Fraise est **ambitieux et viable** sur le plan métier, mais
 - 64% moins cher que Laravel sur 3 ans
 
 **5. Time to market optimal**
-- Lancement en 4-6 semaines
+- Lancement en 18 jours
 - Validation rapide du modèle économique
 - Itérations faciles
 
